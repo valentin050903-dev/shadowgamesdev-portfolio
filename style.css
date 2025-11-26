@@ -1,0 +1,65 @@
+:root{
+  --bg: #0B0C10;
+  --bg-gray: #CFCFCF;
+  --red: #B43131;
+  --green: #2FB23F;
+  --blue: #2B78D9;
+  --accent: #FFCC00;
+  --text: #eaeaea;
+  --card: #111214;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,system-ui,Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+
+.navbar{
+  position:fixed;
+  top:0;left:0;right:0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 24px;
+  background:rgba(10,10,12,0.6);
+  backdrop-filter: blur(4px);
+  z-index:100;
+}
+.navbar .brand{display:flex;align-items:center;gap:10px}
+.logo{width:40px;height:40px;object-fit:contain}
+.navbar ul{list-style:none;display:flex;gap:18px;margin:0;padding:0}
+.navbar a{color:#fff;text-decoration:none;font-weight:600}
+
+.hero{
+  padding:130px 20px 80px;
+  text-align:left;
+  background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.5)), url('./Marca-ShadowGamesDev/banner_web.png') center/cover no-repeat;
+}
+.hero h1{font-family:Poppins, sans-serif;font-size:44px;margin:0 0 8px}
+.hero p{max-width:720px}
+
+.container{padding:60px 20px;max-width:1100px;margin:0 auto}
+h2{font-family:Poppins, sans-serif;margin-bottom:16px}
+
+.grid{display:flex;flex-wrap:wrap;gap:20px}
+.card{background:var(--card);padding:16px;border-radius:10px;width:320px;box-shadow:0 6px 18px rgba(0,0,0,0.5)}
+.card img{width:100%;border-radius:8px}
+.links{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+
+.btn{display:inline-block;background:var(--accent);color:#111;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none}
+.btn.small{padding:6px 10px;font-size:14px;border-radius:6px}
+
+/* contacto y footer */
+.contacto{background:#111;padding-bottom:80px}
+footer{padding:20px;text-align:center;color:#9a9a9a}
+
+/* responsive */
+@media (max-width:768px){
+  .grid{flex-direction:column;align-items:center}
+  .hero h1{font-size:32px}
+  .navbar ul{display:none}
+}
